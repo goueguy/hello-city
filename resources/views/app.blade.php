@@ -9,10 +9,13 @@
         
         @yield("content")
 
-        {{config("projet.welcome")}}
         <footer>
             <p>
-            &copy; Copyright {{ date("Y")}} &middot; <a href="{{route('about')}}">About US</p>
+            &copy; Copyright {{ date("Y")}} 
+            @if(!Route::is('about'))
+                &middot; <a href="{{route('about')}}">About US
+            @endif
+            </p>
         </footer>
     </body>
 </html>
