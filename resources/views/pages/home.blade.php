@@ -1,5 +1,5 @@
 @extends('app')
-@section("title")
+@section("title",config("app.name"))
 @section('content')
         
     <h1>HELLO FROM QUEBEC!</h1>
